@@ -1,0 +1,19 @@
+# Prompt the user to enter the length of time in days
+days_input = int(input("Enter Length of Time in Days: "))
+
+# Calculate the number of years
+years = days_input // 365
+
+# Calculate the remaining days after converting to years
+remaining_days = days_input % 365
+
+# Calculate the number of weeks from the remaining days
+weeks = remaining_days // 7
+
+# Calculate the remaining days after converting to weeks
+days = remaining_days % 7
+
+# Print the results
+print("Years:", years)
+print("Weeks:", weeks)
+print("Days:", days)
