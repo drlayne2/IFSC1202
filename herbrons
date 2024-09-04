@@ -1,0 +1,18 @@
+# Function to calculate the area of a triangle using Heron's formula
+def calculate_area(a, b, c):
+    # Calculate the semi-perimeter
+    s = (a + b + c) / 2
+    # Calculate the area using exponentiation instead of math.sqrt
+    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+    return area
+
+# Input the sides of the triangle
+a = float(input("Enter Side 1: "))
+b = float(input("Enter Side 2: "))
+c = float(input("Enter Side 3: "))
+
+# Calculate the area
+area = calculate_area(a, b, c)
+
+# Display the result
+print(f"Area: {area}")
