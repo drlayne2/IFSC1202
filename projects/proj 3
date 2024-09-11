@@ -1,0 +1,30 @@
+# Simple Calculator Program
+
+# Prompt user for the first number
+first_number = float(input("Enter First Number: "))
+
+# Prompt user for an operator
+operator = input("Enter Operator (+, -, *, /): ")
+
+# Prompt user for the second number
+second_number = float(input("Enter Second Number: "))
+
+# Perform calculation based on the operator
+if operator == '+':
+    result = first_number + second_number
+    print(f"{first_number} + {second_number} = {result}")
+elif operator == '-':
+    result = first_number - second_number
+    print(f"{first_number} - {second_number} = {result}")
+elif operator == '*':
+    result = first_number * second_number
+    print(f"{first_number} * {second_number} = {result}")
+elif operator == '/':
+    # Handle division by zero
+    if second_number == 0:
+        print("Division by zero is not allowed.")
+    else:
+        result = first_number / second_number
+        print(f"{first_number} / {second_number} = {result}")
+else:
+    print("Invalid Operator")
